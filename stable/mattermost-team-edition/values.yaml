@@ -75,14 +75,9 @@ ingress:
     #     - mattermost.example.com
 
 auth:
-  gitlab:
-  #   Enable: false
-  #   Secret: ""
-  #   Id: ""
-  #   Scope: ""
-  #   AuthEndpoint: ""
-  #   TokenEndpoint: ""
-  #   UserApiEndpoint: ""
+  # gitlab is deprecated in favor of extraConfig.GitLabSettings
+  gitlab: {}
+
 
 ## If use this please disable the mysql chart, setting the config mysql.enable to false
 externalDB:
@@ -114,6 +109,8 @@ mysql:
     accessMode: ReadWriteOnce
     size: 10Gi
   # existingClaim: ""
+
+extraConfig: {}
 
 defaultConfig: {
   "ServiceSettings": {
