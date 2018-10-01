@@ -12,12 +12,12 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
   annotations:
-{{ if .Values.ingress.tls }}
+    {{- if .Values.ingress.tls }}
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
     kubernetes.io/tls-acme: "true"
-{{ else }}
+    {{- else }}
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-{{ end }}
+    {{- end }}
 {{ with $ingress.annotations }}
 {{ toYaml . | indent 4 }}
 {{ end }}
