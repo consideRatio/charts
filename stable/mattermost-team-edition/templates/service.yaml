@@ -17,6 +17,3 @@ spec:
     targetPort: {{ .Values.service.internalPort }}
     protocol: TCP
     name: {{  template "mattermost-team-edition.name" . }}
-  {{- if .Values.service.loadBalancerIP }}
-  loadBalancerIP: {{ .Values.service.loadBalancerIP }}
-  {{- end }}

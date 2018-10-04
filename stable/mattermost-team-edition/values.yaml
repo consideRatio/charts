@@ -206,7 +206,7 @@ defaultConfig: {
     "EnableDiagnostics": true
   },
   "PasswordSettings": {
-    "MinimumLength": 5,
+    "MinimumLength": 0,
     "Lowercase": false,
     "Number": false,
     "Uppercase": false,
